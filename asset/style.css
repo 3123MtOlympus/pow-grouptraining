@@ -1,100 +1,164 @@
 body {
-    font-family: "Big Shoulders Display", sans-serif;
-    margin: 0;
-    padding: 0;
-background-image: url(/asset/image/Perkzofwerk\ \(3\).png);
-background-position: center cover;  }
-  header {
-  background-image: url(/asset/image/Perkzofwerk.png);
-  
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
-  .container {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #5b565648;
-    max-width: 600px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  h1 {
-    text-align: center;
-    
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  input, button {
-    padding: 10px;
-    margin: 10px 0;
-    font-size: 16px;
-    font-family: "Big Shoulders Display", sans-serif;
-  }
+  font-family: "Big Shoulders Display", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(/asset/image/Perkzofwerk\ \(3\).png);
+  background-position: center cover;
+}
 
-  .class-time-btn {
-    padding: 10px;
-    width: 50px;
-    margin: 10px 0;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  .class-time-btn:hover {
-    background-color: #705036;
-  }
-  .payment-info {
-    padding: 10px;
-    margin: 20px 0;
-    background-color: #f0f8ff;
-    border: 1px solid #007BFF;
-  }
-  .discount {
-    color: green;
-    font-weight: bold;
-  }
-  .payment-button {
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    text-align: center;
-  }
-  .payment-button:hover {
-    background-color: #218838;
-  }
-  .monthly-button {
-    background-color: #007BFF;
-  }
-  .monthly-button:hover {
-    background-color: #0056b3;
-  }
-  .positive-message {
-    color: green;
-  }
-  .payment-message {
-    color: #d9534f;
-    font-weight: bold;
-    text-align: center;
-    display: none;
-  }
-  .logo-container {
-    text-align: center; /* Centers the logo in the container */
-    padding: 20px;     /* Adds some padding around the logo */
-    box-shadow: 3px 5px 15px inset rgb(69, 67, 67);
-   
+header {
+  background-image: url(/asset/image/Perkzofwerk.png);
+
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.container {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #5b565648;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+button {
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  font-family: "Big Shoulders Display", sans-serif;
+}
+
+.class-time-btn {
+  padding: 10px;
+  width: 50px;
+  margin: 10px 0;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.class-time-btn:hover {
+  background-color: #705036;
+}
+
+.payment-info {
+  padding: 10px;
+  margin: 20px 0;
+  background-color: #f0f8ff;
+  border: 1px solid #007BFF;
+}
+
+.discount {
+  color: green;
+  font-weight: bold;
+}
+
+.payment-button {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+}
+
+.payment-button:hover {
+  background-color: #218838;
+}
+
+.monthly-button {
+  background-color: #007BFF;
+}
+
+.monthly-button:hover {
+  background-color: #0056b3;
+}
+
+.positive-message {
+  color: green;
+}
+
+.payment-message {
+  color: #d9534f;
+  font-weight: bold;
+  text-align: center;
+  display: none;
+}
+
+.logo-container {
+  text-align: center;
+  /* Centers the logo in the container */
+  padding: 20px;
+  /* Adds some padding around the logo */
+
 }
 
 .logo {
-    max-width: 100%;   /* Ensures the logo is responsive */
-    height: auto;      /* Maintains aspect ratio */
-    /* border: 3px solid rgb(69, 67, 67);
-    border-radius: 5px; */
+  max-width: 60%;
+  /* Ensures the logo is responsive */
+  height: 10%;
+  /* Maintains aspect ratio */
+  border: 3px solid rgb(69, 67, 67);
+  border-radius: 5px;
+  box-shadow: 3px 5px 15px inset rgb(69, 67, 67);
+}
+
+.confirmation-message {
+  color: #312e2e;
+  font-weight: 800px;
+}
+/* Grid container styling */
+.apparel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates a 2x2 grid */
+  gap: 20px; /* Adds space between the items */
+  padding: 20px;
+}
+
+/* Individual apparel item styling */
+.apparel-item {
+  text-align: center;
+}
+
+/* Image styling */
+.apparel-image {
+  width: 100%; /* Ensures the images are responsive */
+  height: auto; /* Maintains the aspect ratio */
+  max-width: 300px; /* Sets a maximum width for the image */
+  border: 1px solid #312e2e;
+  box-shadow: 8px 8px #312e2e63;
+  border-radius: 15px;
+  object-fit: cover; /* Ensures the image covers the container fully */
+}
+
+/* Link styling */
+a {
+  text-decoration: none; /* Removes the default underline on links */
+  color: inherit; /* Inherits the text color */
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 1em;
 }

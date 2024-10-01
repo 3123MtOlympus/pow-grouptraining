@@ -13,14 +13,11 @@
 
 <body>
 
-    <div class="logo-container">
-        <img src="/asset/image/Perkzofwerk (3).png" alt="PerkzofWerk Logo" class="logo">
-    
-    </div>
+    <
 
     <div class="container">
     <header>
-        <h1>Join PerkzofWerk Calisthenics Group Classes</h1>
+        <h1>Join PerkzofWerk Calisthenics Group Fitness Classes</h1>
 
     </header>
 
@@ -33,14 +30,10 @@
         prepared for a variety of movements. To ensure a successful and enjoyable experience, attendees are required to
         bring their own water, a towel, and a mat for comfort during floor exercises. Stay hydrated and come ready to
         challenge yourself in a supportive environment!</p>
-</div>
+        
 
-
-   
-
-    <div class="container">
-        <!-- Available Class Times with Clickable Buttons -->
         <h2>Select Available Class Time</h2>
+        <p><i>Class Schedule subjected to change.</i></p>
         <div class="class-times">
             <button class="class-time-btn" data-time="Oct 7th - 6:00 AM">Oct 7th 6:00 AM</button>
             <button class="class-time-btn" data-time="Oct 9th - 6:00 AM">Oct 9th 6:00 AM</button>
@@ -55,32 +48,28 @@
             <button class="class-time-btn" data-time="Oct 30th - 6:00 AM">Oct 30th 6:00 AM</button>
 
         </div>
-    </div>
+        <div class="container" id="registration-container" style="display:none;">
+            <p class="confirmation-message" id="selected-class-message" ></p>
+            <form id="class-registration-form">
+                <input type="hidden" id="selected-class-time" />
+                <label for="register-name">Name:</label>
+                <input type="text" id="register-name" placeholder="First & Last Name" required />
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" placeholder="Email" required />
+                <button type="submit">Register</button>
+            </form>
+            <div id="confirmation-message" class="confirmation-message"></div>
+        </div>
 
-    <div class="container" id="registration-container" style="display:none;">
-        <p id="selected-class-message"></p>
-        <form id="class-registration-form">
-            <input type="hidden" id="selected-class-time" />
-            <label for="register-name">Name:</label>
-            <input type="text" id="register-name" placeholder="First & Last Name" required />
-            <label for="register-email">Email:</label>
-            <input type="email" id="register-email" placeholder="Email" required />
-            <button type="submit">Register</button>
-        </form>
-        <div id="confirmation-message"></div>
-    </div>
-
-    <div class="container">
-        <!-- Payment Section -->
         <h2>Class Pricing</h2>
         <div class="payment-info">
-            <p>Classes available Monday, Wednesday & Friday. <i>Class Schedule subjected to change.</i></p>
+           
 
             </p>
             <p>Price per class: <strong>$50</strong></p>
             <p>Commit to a monthly membership and save <span class="discount" id="discount-percentage"></span>!</p>
             
-            <p>Price with subscription: <strong>$35 <i>(minimum 8 classes/month, 3 month
+            <p>Price per class with subscription: <strong>$35 <i>(minimum 8 classes/month, 3 month
                 subscription)</i></strong></p>
            <!-- Buttons to Sign Up for Classes or Membership -->
             <div id="payment-options">
@@ -88,6 +77,53 @@
                 <button onclick="redirectToPayment('monthlypayment.html')">Subscribe</button>
             </div>
         </div>
+</div>
+
+<div class="logo-container">
+        <img src="/asset/image/Perkzofwerk (5).png" alt="PerkzofWerk Logo" class="logo">
+    </div>
+
+   
+<!-- 
+    <div class="container">
+      Available Class Times with Clickable Buttons
+        <section class="apparel-grid">
+            <div class="apparel-item">
+                <a href="apparel-page1.html">
+                    <img src="/asset/image/8.png" alt="Apparel 1" class="apparel-image">
+                    <h2>Men's Apparel</h2>
+                    <p>Comfortable and stylish.</p>
+                </a>
+            </div>
+            <div class="apparel-item">
+                <a href="apparel-page2.html">
+                    <img src="/asset/image/9.png" alt="Apparel 2" class="apparel-image">
+                    <h2>Women's Apparel</h2>
+                    <p>Designed for performance.</p>
+                </a>
+            </div>
+            <div class="apparel-item">
+                <a href="apparel-page3.html">
+                    <img src="/asset/image/10.png" alt="Apparel 3" class="apparel-image">
+                    <h2>PerkzofWerk Equipment</h2>
+                    <p>Everrything we use in class</p>
+                </a>
+            </div>
+            <div class="apparel-item">
+                <a href="apparel-page4.html">
+                    <img src="/asset/image/11.png" alt="Apparel 4" class="apparel-image">
+                    <h2>Personal Training</h2>
+                    <p>Get Results Independently</p>
+                </a>
+            </div>
+        </section>
+    </div>
+
+  -->
+
+    <div class="container">
+        <!-- Payment Section -->
+        
 
         <!-- Registration Form for Guest Users
   <h2>Sign Up for a Class as Guest</h2>

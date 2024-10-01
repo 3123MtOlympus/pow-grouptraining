@@ -5,7 +5,7 @@ document.querySelectorAll('.class-time-btn').forEach(button => {
     document.getElementById('selected-class-time').value = selectedClassTime;
 
     // Display the selected class message
-    document.getElementById('selected-class-message').textContent = `You've selected ${selectedClassTime}. Please register below.`;
+    document.getElementById('selected-class-message').textContent = `You've selected ${selectedClassTime}. Please register below. You will recieve details by email!`;
 
     document.getElementById('registration-container').style.display = 'block';
     document.getElementById('registration-container').scrollIntoView({ behavior: 'smooth' });
