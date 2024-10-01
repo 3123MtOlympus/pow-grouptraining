@@ -2,10 +2,11 @@ body {
     font-family: "Big Shoulders Display", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-  }
+background-image: url(/asset/image/Perkzofwerk\ \(3\).png);
+background-position: center cover;  }
   header {
   background-image: url(/asset/image/Perkzofwerk.png);
+  
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -13,7 +14,7 @@ body {
   .container {
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #5b565648;
     max-width: 600px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
@@ -43,7 +44,7 @@ body {
     font-size: 16px;
   }
   .class-time-btn:hover {
-    background-color: #0056b3;
+    background-color: #705036;
   }
   .payment-info {
     padding: 10px;
@@ -84,4 +85,16 @@ body {
     text-align: center;
     display: none;
   }
+  .logo-container {
+    text-align: center; /* Centers the logo in the container */
+    padding: 20px;     /* Adds some padding around the logo */
+    box-shadow: 3px 5px 15px inset rgb(69, 67, 67);
+   
+}
 
+.logo {
+    max-width: 100%;   /* Ensures the logo is responsive */
+    height: auto;      /* Maintains aspect ratio */
+    /* border: 3px solid rgb(69, 67, 67);
+    border-radius: 5px; */
+}
