@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/pow-grouptraining/asset/style.css">
+    <link rel="stylesheet" href="/asset/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap"
         rel="stylesheet">
     <title>Fitness Calisthenics Class Sign Up</title>
@@ -12,57 +12,72 @@
 </head>
 
 <body>
-
+    <div class="container">
     <header>
-        <h1>Join Our Fitness Calisthenics Class</h1>
+        <h1>Join PerkzofWerk Calisthenics Group Classes</h1>
+
+            <div class="logo-container">
+                <!-- <img class="header-image" src="/asset/image/Perkzofwerk.png" alt="Your Logo" class="logo"> -->
+            </div>
     </header>
+
+    <p>Welcome to our outdoor total body weight calisthenics exercise class! Participants can expect a dynamic and
+        engaging workout that incorporates running, jumping, and various bodyweight exercises designed to improve
+        strength, endurance, and flexibility. Occasionally, we will use equipment to enhance our training, so be
+        prepared for a variety of movements. To ensure a successful and enjoyable experience, attendees are required to
+        bring their own water, a towel, and a mat for comfort during floor exercises. Stay hydrated and come ready to
+        challenge yourself in a supportive environment!</p>
+</div>
+   
 
     <div class="container">
         <!-- Available Class Times with Clickable Buttons -->
         <h2>Select Available Class Time</h2>
         <div class="class-times">
-            <button class="class-time-btn" data-time="2024-10-05 10:00">Oct 7th - 6:00 AM</button>
-            <button class="class-time-btn" data-time="2024-10-07 14:00">Oct 9th - 6:00 AM</button>
-            <button class="class-time-btn" data-time="2024-10-10 18:00">Oct 11th - 6:00 AM</button>
-            <button class="class-time-btn" data-time="2024-10-12 08:00">Oct 14th - 6:00 AM</button>
-            <button class="class-time-btn" data-time="2024-10-05 10:00">Oct 16th - 6:00 AM</button>
-            <button class="class-time-btn" data-time="2024-10-07 14:00">Oct 18th - 6:00 AM</button>
-            <button class="class-time-btn" data-time="2024-10-10 18:00">Oct 21st - 6:00 AM</button>
-            <button class="class-time-btn" data-time="2024-10-12 08:00">Oct 23rd - 6:00 AM</button>
-            <button class="class-time-btn" data-time="2024-10-05 10:00">Oct 25th - 6:00 AM</button>
-            <button class="class-time-btn" data-time="2024-10-07 14:00">Oct 28th - 6:00 AM</button>
-            <button class="class-time-btn" data-time="2024-10-10 18:00">Oct 30th - 6:00 AM</button>
+            <button class="class-time-btn" data-time="Oct 7th - 6:00 AM">Oct 7th - 6:00 AM</button>
+            <button class="class-time-btn" data-time="Oct 9th - 6:00 AM">Oct 9th - 6:00 AM</button>
+            <button class="class-time-btn" data-time="Oct 11th - 6:00 AM">Oct 11th - 6:00 AM</button>
+            <button class="class-time-btn" data-time="Oct 14th - 6:00 AM">Oct 14th - 6:00 AM</button>
+            <button class="class-time-btn" data-time="Oct 16th - 6:00 AM">Oct 16th - 6:00 AM</button>
+            <button class="class-time-btn" data-time="Oct 18th - 6:00 AM">Oct 18th - 6:00 AM</button>
+            <button class="class-time-btn" data-time="Oct 21st - 6:00 AM">Oct 21st - 6:00 AM</button>
+            <button class="class-time-btn" data-time="Oct 23rd - 6:00 AM">Oct 23rd - 6:00 AM</button>
+            <button class="class-time-btn" data-time="Oct 25th - 6:00 AM">Oct 25th - 6:00 AM</button>
+            <button class="class-time-btn" data-time="Oct 28th - 6:00 AM">Oct 28th - 6:00 AM</button>
+            <button class="class-time-btn" data-time="Oct 30th - 6:00 AM">Oct 30th - 6:00 AM</button>
 
         </div>
     </div>
 
-    <div class="container" id="registration-container">
-        <!-- Registration Form for Signing Up for a Class -->
-        <h2>Register for Class</h2>
+    <div class="container" id="registration-container" style="display:none;">
+        <p id="selected-class-message"></p>
         <form id="class-registration-form">
-            <input type="text" id="register-name" name="name" placeholder="Your Name" required>
-            <input type="email" id="register-email" name="email" placeholder="Your Email" required>
-            <!-- <input type="password" id="register-password" name="password" placeholder="Create a Password" required> -->
-            <input type="hidden" id="selected-class-time" name="classTime">
-            <button type="submit">Reserve Spot</button>
+            <input type="hidden" id="selected-class-time" />
+            <label for="register-name">Name:</label>
+            <input type="text" id="register-name" placeholder="First & Last Name" required />
+            <label for="register-email">Email:</label>
+            <input type="email" id="register-email" placeholder="Email" required />
+            <button type="submit">Register</button>
         </form>
         <div id="confirmation-message"></div>
     </div>
+
     <div class="container">
         <!-- Payment Section -->
         <h2>Class Pricing</h2>
         <div class="payment-info">
             <p>Classes available Monday, Wednesday & Friday. <i>Class Schedule subjected to change.</i></p>
-            
+
             </p>
             <p>Price per class: <strong>$50</strong></p>
             <p>Price with monthly membership: <strong>$35 per class (minimum 8 classes/month, 3 month
                     commitment)</strong></p>
             <p>Commit to a monthly membership and save <span class="discount" id="discount-percentage"></span>!</p>
-         <!-- Buttons to Sign Up for Classes or Membership -->
-    <button class="payment-button" id="individual-class-button" onclick="redirectToPayment('individual')">Sign up for Individual Classes ($50)</button>
-    <button class="payment-button monthly-button" id="monthly-membership-button" onclick="redirectToPayment('monthly')">Commit to Monthly Membership ($280 per month)</button>
-  </div>
+            <!-- Buttons to Sign Up for Classes or Membership -->
+            <div id="payment-options">
+                <button onclick="redirectToPayment('individualpayment.html')">Pay for Individual Class</button>
+                <button onclick="redirectToPayment('monthlypayment.html')">Sign Up for Monthly Membership</button>
+            </div>
         </div>
 
         <!-- Registration Form for Guest Users

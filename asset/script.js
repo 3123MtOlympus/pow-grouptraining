@@ -1,74 +1,63 @@
 // Handle class time signup via button clicks and show the registration form
 document.querySelectorAll('.class-time-btn').forEach(button => {
-    button.addEventListener('click', function() {
-      const selectedClassTime = this.getAttribute('data-time');
-      
-      // Store the selected class time in the hidden input field
-      document.getElementById('selected-class-time').value = selectedClassTime;
-      
-      // Display the registration container
-      document.getElementById('registration-container').style.display = 'block';
+  button.addEventListener('click', () => {
+    const selectedClassTime = button.getAttribute('data-time');
+    document.getElementById('selected-class-time').value = selectedClassTime;
 
-      // Scroll to the registration section
-      document.getElementById('registration-container').scrollIntoView({ behavior: 'smooth' });
-    });
+    // Display the selected class message
+    document.getElementById('selected-class-message').textContent = `You've selected ${selectedClassTime}. Please register below.`;
+
+    document.getElementById('registration-container').style.display = 'block';
+    document.getElementById('registration-container').scrollIntoView({ behavior: 'smooth' });
   });
+});
 
-  // Handle form submission to reserve a spot
-  document.getElementById('class-registration-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+// Handle form submission to reserve a spot and scroll to the payment section
+document.getElementById('class-registration-form').addEventListener('submit', e => {
+  e.preventDefault();
 
-    const name = document.getElementById('register-name').value;
-    const email = document.getElementById('register-email').value;
-    const classTime = document.getElementById('selected-class-time').value;
+  const name = document.getElementById('register-name').value;
+  const classTime = document.getElementById('selected-class-time').value;
+  document.getElementById('confirmation-message').textContent = `Thank you, ${name}! You have successfully reserved a spot for the class on ${classTime}.`;
 
-    // Display a confirmation message
-    const confirmationMessage = document.getElementById('confirmation-message');
-    confirmationMessage.textContent = `Thank you, ${name}! You have successfully reserved a spot for the class on ${classTime}. A confirmation email has been sent to ${email}.`;
+  document.getElementById('payment-container').style.display = 'block';
+  document.getElementById('payment-message').style.display = 'block';
+  document.getElementById('payment-container').scrollIntoView({ behavior: 'smooth' });
+});
 
-    // Optionally, clear the form
-    document.getElementById('class-registration-form').reset();
-  });
+// Calculate and display the discount for membership
+const standardPrice = 50;
+const membershipPrice = 35;
+const discountPercentage = Math.round(((standardPrice - membershipPrice) / standardPrice) * 100);
+document.getElementById('discount-percentage').textContent = `${discountPercentage}% off`;
 
-  // Calculate and display the discount for membership
-  const standardPrice = 50;
-  const membershipPrice = 35;
-  const discountPercentage = Math.round(((standardPrice - membershipPrice) / standardPrice) * 100);
-  document.getElementById('discount-percentage').textContent = `${discountPercentage}% off`;
+// Redirect to the payment page
+function redirectToPayment(option) {
+  const url = option === 'individual' 
+    ? "https://example.com/payment/individual" 
+    : "https://example.com/payment/monthly";
+  window.location.href = url;
+}
 
-  // Function to redirect to the payment page
-  function redirectToPayment(option) {
-    if (option === 'individual') {
-      // Redirect to the payment page for individual class signup (replace URL with actual payment page)
-      window.location.href = "https://example.com/payment/individual";
-    } else if (option === 'monthly') {
-      // Redirect to the payment page for monthly membership signup (replace URL with actual payment page)
-      window.location.href = "https://example.com/payment/monthly";
-    }
+// Handle class time signup from form
+document.getElementById('class-time-form').addEventListener('submit', e => {
+  e.preventDefault();
+  const selectedClassTime = document.getElementById('class-time').value;
+  alert(`You have successfully signed up for the class on ${selectedClassTime}`);
+});
+
+// Redirect to the payment page based on selected option
+function redirectToPayment(option) {
+  if (option === 'individual') {
+    // Redirect to the Zelle form for individual class payment
+    window.location.href = "/individualpayment.html"; // Replace with actual Zelle form URL
+  } else if (option === 'monthly') {
+    // Redirect to the Zelle form for monthly membership payment with auto pay option
+    window.location.href = "/monthlypayment.html"; // Replace with actual Zelle form URL
   }
+}
 
-
-// // Simple weight tracking calculation
-// document.getElementById('profile-form').addEventListener('submit', function(e) {
-//     e.preventDefault();
-
-//     const currentWeight = parseFloat(document.getElementById('current-weight').value);
-//     const goalWeight = parseFloat(document.getElementById('goal-weight').value);
-//     const resultMessage = document.getElementById('result-message');
-
-//     if (currentWeight >= goalWeight) {
-//       resultMessage.textContent = 'You’ve gained muscle! Keep working towards your goal!';
-//     } else if (currentWeight < goalWeight) {
-//       resultMessage.textContent = 'You’ve lost weight! Keep pushing towards your goal!';
-//     } else {
-//       resultMessage.textContent = 'You’re on track! Keep maintaining your goal weight!';
-//     }
-//   });
-
-// Handle class time signup
-document.getElementById('class-time-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const selectedClassTime = document.getElementById('class-time').value;
-    alert('You have successfully signed up for the class on ' + selectedClassTime);
-  });
+// Example auto pay message display (optional)
+const autoPayMessage = document.createElement('p');
+autoPayMessage.textContent = 'Sign up for auto pay to save an additional $5!';
+document.getElementById('payment-options').appendChild(autoPayMessage);

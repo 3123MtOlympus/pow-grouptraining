@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/asset/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap" rel="stylesheet">  
+    <title>Document</title>
+</head>
+<body>
+  <header>
+      <h1>Individual Class Payment</h1>
+  </header>
+  
+  <main>
+      <form action="payment_process.php" method="POST">
+          <h2>Class Payment Details</h2>
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="class">Select Class:</label>
+          <select id="class" name="class" required>
+              <option value="class1">Class 1</option>
+              <option value="class2">Class 2</option>
+              <option value="class3">Class 3</option>
+          </select>
+
+          <label for="payment">Payment Amount:</label>
+          <input type="number" id="payment" name="payment" required>
+
+          <h3>Payment Information</h3>
+          <label for="card-number">Card Number:</label>
+          <input type="text" id="card-number" name="card-number" required>
+
+          <label for="expiry">Expiry Date:</label>
+          <input type="text" id="expiry" name="expiry" required>
+
+          <label for="cvv">CVV:</label>
+          <input type="text" id="cvv" name="cvv" required>
+
+          <button type="submit">Submit Payment</button>
+      </form>
+  </main>
+</body>
+</html>
