@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/pow-grouptraining/asset/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap"
+        rel="stylesheet">
+    <title>Fitness Calisthenics Class Sign Up</title>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Join Our Fitness Calisthenics Class</h1>
+    </header>
+
+    <div class="container">
+        <!-- Available Class Times with Clickable Buttons -->
+        <h2>Select Available Class Time</h2>
+        <div class="class-times">
+            <button class="class-time-btn" data-time="2024-10-05 10:00">Oct 7th - 6:00 AM</button>
+            <button class="class-time-btn" data-time="2024-10-07 14:00">Oct 9th - 6:00 AM</button>
+            <button class="class-time-btn" data-time="2024-10-10 18:00">Oct 11th - 6:00 AM</button>
+            <button class="class-time-btn" data-time="2024-10-12 08:00">Oct 14th - 6:00 AM</button>
+            <button class="class-time-btn" data-time="2024-10-05 10:00">Oct 16th - 6:00 AM</button>
+            <button class="class-time-btn" data-time="2024-10-07 14:00">Oct 18th - 6:00 AM</button>
+            <button class="class-time-btn" data-time="2024-10-10 18:00">Oct 21st - 6:00 AM</button>
+            <button class="class-time-btn" data-time="2024-10-12 08:00">Oct 23rd - 6:00 AM</button>
+            <button class="class-time-btn" data-time="2024-10-05 10:00">Oct 25th - 6:00 AM</button>
+            <button class="class-time-btn" data-time="2024-10-07 14:00">Oct 28th - 6:00 AM</button>
+            <button class="class-time-btn" data-time="2024-10-10 18:00">Oct 30th - 6:00 AM</button>
+
+        </div>
+    </div>
+
+    <div class="container" id="registration-container">
+        <!-- Registration Form for Signing Up for a Class -->
+        <h2>Register for Class</h2>
+        <form id="class-registration-form">
+            <input type="text" id="register-name" name="name" placeholder="Your Name" required>
+            <input type="email" id="register-email" name="email" placeholder="Your Email" required>
+            <!-- <input type="password" id="register-password" name="password" placeholder="Create a Password" required> -->
+            <input type="hidden" id="selected-class-time" name="classTime">
+            <button type="submit">Reserve Spot</button>
+        </form>
+        <div id="confirmation-message"></div>
+    </div>
+    <div class="container">
+        <!-- Payment Section -->
+        <h2>Class Pricing</h2>
+        <div class="payment-info">
+            <p>Classes available Monday, Wednesday & Friday. <i>Class Schedule subjected to change.</i></p>
+            
+            </p>
+            <p>Price per class: <strong>$50</strong></p>
+            <p>Price with monthly membership: <strong>$35 per class (minimum 8 classes/month, 3 month
+                    commitment)</strong></p>
+            <p>Commit to a monthly membership and save <span class="discount" id="discount-percentage"></span>!</p>
+         <!-- Buttons to Sign Up for Classes or Membership -->
+    <button class="payment-button" id="individual-class-button" onclick="redirectToPayment('individual')">Sign up for Individual Classes ($50)</button>
+    <button class="payment-button monthly-button" id="monthly-membership-button" onclick="redirectToPayment('monthly')">Commit to Monthly Membership ($280 per month)</button>
+  </div>
+        </div>
+
+        <!-- Registration Form for Guest Users
+  <h2>Sign Up for a Class as Guest</h2>
+  <form id="registration-form">
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+    <input type="password" id="password" name="password" placeholder="Create a Password" required>
+    <button type="submit">Register</button>
+  </form> -->
+    </div>
+
+    <script src="/asset/script.js"></script>
+</body>
+
+</html>
