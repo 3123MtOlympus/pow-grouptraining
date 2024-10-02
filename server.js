@@ -68,7 +68,7 @@ const transporter = nodemailer.createTransport({
     service: 'gmail', // Use your email service (Gmail, Outlook, etc.)
     auth: {
         user: 'perkzofwerk@gmail.com', // Your email address
-        pass: 'yourpassword'         // Your email password (consider using environment variables for security)
+        pass: 'Chris44_'         // Your email password (consider using environment variables for security)
     }
 });
 
@@ -86,7 +86,7 @@ app1.post('/register', (req, res) => {
         // Send confirmation email to the owner
         const mailOptions = {
             from: 'youremail@gmail.com', // Sender address
-            to: 'owneremail@example.com', // Owner's email
+            to: 'perkzofwerk@gmail.com', // Owner's email
             subject: 'New User Registration', // Email subject
             text: `A new user has registered. \n\nUsername: ${username}\nEmail: ${email}` // Email content
         };
@@ -107,3 +107,4 @@ app1.post('/register', (req, res) => {
 app.listen(3000, () => {
     console.log('Server started on http://localhost:3000');
 });
+ 
