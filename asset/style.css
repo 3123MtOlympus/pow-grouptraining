@@ -30,15 +30,20 @@ h1 {
 form {
   display: flex;
   flex-direction: column;
+  border: 2px solid #5b565648;
+  margin: 10px 10px;
 }
 
-input,
-button {
+input,label, form,
+button, select {
   padding: 10px;
-  margin: 10px 0;
+  margin: 10px 10px;
   font-size: 16px;
   font-family: "Big Shoulders Display", sans-serif;
+  width: 50%;
+  margin: 0 auto;
 }
+
 
 .class-time-btn {
   padding: 10px;
@@ -111,13 +116,23 @@ button {
 }
 
 .logo {
-  max-width: 60%;
+  max-width: 100%;
   /* Ensures the logo is responsive */
   height: 10%;
   /* Maintains aspect ratio */
   border: 3px solid rgb(69, 67, 67);
   border-radius: 5px;
-  box-shadow: 3px 5px 15px inset rgb(69, 67, 67);
+  box-shadow: 3px 5px 15px  rgb(69, 67, 67);
+}
+.logo:hover {
+  max-width: 99%;
+  /* Ensures the logo is responsive */
+  height: 10%;
+  /* Maintains aspect ratio */
+  border: 3px solid rgb(112, 99, 73);
+  border-radius: 5px;
+  box-shadow: 13px 15px 15px inset rgb(112, 99, 73), rgb(112, 99, 73) ;
+  background-color: #70503669;
 }
 
 .confirmation-message {
